@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ric Jose Felipe — Electrical & Electronics Engineer</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --navy: #0d1f2d;
+    --navy-mid: #162636;
+    --navy-soft: #1e3448;
+    --accent: #4e9af1;
+    --accent-dim: rgba(78,154,241,0.15);
+    --accent-line: rgba(78,154,241,0.35);
+    --text-primary: #f0f4f8;
+    --text-secondary: #8fa8c0;
+    --text-muted: #4d6b84;
+    --border: rgba(255,255,255,0.07);
+    --card-bg: rgba(255,255,255,0.035);
+    --card-hover: rgba(255,255,255,0.06);
+    --serif: 'DM Serif Display', Georgia, serif;
+    --sans: 'DM Sans', system-ui, sans-serif;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--sans);
+    background: var(--navy);
+    color: var(--text-primary);
+    font-size: 15px;
+    line-height: 1.7;
+    font-weight: 300;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 1.25rem 4rem;
+    background: rgba(13,31,45,0.88);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+  }
+  .nav-logo {
+    font-family: var(--serif);
+    font-size: 1.15rem;
+    color: var(--text-primary);
+    text-decoration: none;
+    letter-spacing: 0.01em;
+  }
+  .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+  .nav-links a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 0.82rem;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--accent); }
+
+  /* ── HERO ── */
+  #hero {
+    min-height: 100vh;
+    display: flex; align-items: center;
+    padding: 8rem 4rem 5rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    width: 100%;
+  }
+  .hero-eyebrow {
+    font-size: 0.78rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 1.25rem;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .hero-eyebrow::before {
+    content: '';
+    display: inline-block;
+    width: 28px; height: 1px;
+    background: var(--accent);
+  }
+  .hero-name {
+    font-family: var(--serif);
+    font-size: clamp(2.6rem, 5vw, 4rem);
+    line-height: 1.1;
+    color: var(--text-primary);
+    margin-bottom: 1.25rem;
+  }
+  .hero-name em {
+    font-style: italic;
+    color: var(--accent);
+  }
+  .hero-tagline {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.75;
+    max-width: 420px;
+    margin-bottom: 2.5rem;
+    font-weight: 300;
+  }
+  .hero-cta {
+    display: flex; gap: 1rem; flex-wrap: wrap;
+  }
+  .btn-primary {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 0.75rem 1.75rem;
+    background: var(--accent);
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.83rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    border-radius: 2px;
+    transition: opacity 0.2s, transform 0.2s;
+  }
+  .btn-primary:hover { opacity: 0.88; transform: translateY(-1px); }
+  .btn-outline {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 0.75rem 1.75rem;
+    border: 1px solid var(--accent-line);
+    color: var(--accent);
+    text-decoration: none;
+    font-size: 0.83rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    border-radius: 2px;
+    transition: background 0.2s, transform 0.2s;
+  }
+  .btn-outline:hover { background: var(--accent-dim); transform: translateY(-1px); }
+
+  .hero-stats {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;
+  }
+  .stat-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 1.5rem 1.25rem;
+    transition: background 0.2s;
+  }
+  .stat-card:hover { background: var(--card-hover); }
+  .stat-num {
+    font-family: var(--serif);
+    font-size: 2.2rem;
+    color: var(--accent);
+    line-height: 1;
+    margin-bottom: 0.4rem;
+  }
+  .stat-label {
+    font-size: 0.78rem;
+    color: var(--text-secondary);
+    letter-spacing: 0.04em;
+  }
+
+  /* ── SECTIONS ── */
+  section { padding: 6rem 4rem; max-width: 1100px; margin: 0 auto; }
+
+  .section-eyebrow {
+    font-size: 0.75rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 0.6rem;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .section-eyebrow::before {
+    content: '';
+    display: inline-block;
+    width: 20px; height: 1px;
+    background: var(--accent);
+  }
+  .section-title {
+    font-family: var(--serif);
+    font-size: clamp(1.8rem, 3vw, 2.4rem);
+    color: var(--text-primary);
+    margin-bottom: 3rem;
+    line-height: 1.15;
+  }
+
+  /* ── ABOUT ── */
+  .about-grid {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 4rem;
+    align-items: start;
+  }
+  .about-text p {
+    color: var(--text-secondary);
+    margin-bottom: 1.25rem;
+    font-size: 0.97rem;
+    line-height: 1.8;
+  }
+  .about-text p:last-child { margin-bottom: 0; }
+  .about-text strong { color: var(--text-primary); font-weight: 500; }
+
+  .about-info { display: flex; flex-direction: column; gap: 1rem; }
+  .info-item {
+    display: flex; flex-direction: column; gap: 2px;
+    padding: 1rem 1.25rem;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+  }
+  .info-label { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted); }
+  .info-value { font-size: 0.9rem; color: var(--text-primary); font-weight: 400; }
+
+  /* ── SKILLS ── */
+  .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; }
+  .skill-group {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 1.5rem;
+    transition: background 0.2s, border-color 0.2s;
+  }
+  .skill-group:hover { background: var(--card-hover); border-color: var(--accent-line); }
+  .skill-group-title {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--accent);
+    margin-bottom: 1rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .skill-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+  .skill-tag {
+    font-size: 0.78rem;
+    padding: 4px 10px;
+    background: rgba(78,154,241,0.08);
+    border: 1px solid rgba(78,154,241,0.2);
+    border-radius: 2px;
+    color: var(--text-secondary);
+    font-weight: 400;
+  }
+
+  /* ── EXPERIENCE ── */
+  .timeline { position: relative; }
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 10px; top: 6px; bottom: 6px;
+    width: 1px;
+    background: var(--border);
+  }
+  .timeline-item {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0 2rem;
+    margin-bottom: 3rem;
+    position: relative;
+  }
+  .timeline-dot {
+    width: 21px; height: 21px;
+    border-radius: 50%;
+    background: var(--navy);
+    border: 2px solid var(--accent);
+    margin-top: 3px;
+    flex-shrink: 0;
+    position: relative; z-index: 1;
+  }
+  .exp-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 1.75rem;
+    transition: background 0.2s;
+  }
+  .exp-card:hover { background: var(--card-hover); }
+  .exp-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; margin-bottom: 0.5rem; flex-wrap: wrap; }
+  .exp-role { font-family: var(--serif); font-size: 1.15rem; color: var(--text-primary); }
+  .exp-period {
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    color: var(--accent);
+    background: var(--accent-dim);
+    padding: 3px 10px;
+    border-radius: 2px;
+    white-space: nowrap;
+    font-weight: 500;
+  }
+  .exp-company { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1.25rem; }
+  .exp-bullets { list-style: none; }
+  .exp-bullets li {
+    font-size: 0.88rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    padding: 0.3rem 0 0.3rem 1.25rem;
+    position: relative;
+    border-bottom: 1px solid var(--border);
+  }
+  .exp-bullets li:last-child { border-bottom: none; }
+  .exp-bullets li::before {
+    content: '→';
+    position: absolute; left: 0;
+    color: var(--accent);
+    font-size: 0.75rem;
+    top: 0.38rem;
+  }
+
+  /* ── PROJECTS ── */
+  .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
+  .project-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 1.75rem;
+    display: flex; flex-direction: column;
+    transition: background 0.2s, border-color 0.2s, transform 0.2s;
+  }
+  .project-card:hover { background: var(--card-hover); border-color: var(--accent-line); transform: translateY(-3px); }
+  .project-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--accent);
+    margin-bottom: 0.75rem;
+  }
+  .project-title {
+    font-family: var(--serif);
+    font-size: 1.1rem;
+    color: var(--text-primary);
+    line-height: 1.3;
+    margin-bottom: 0.75rem;
+  }
+  .project-desc {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    line-height: 1.75;
+    flex: 1;
+    margin-bottom: 1.25rem;
+  }
+  .project-tech { display: flex; flex-wrap: wrap; gap: 5px; }
+  .tech-pill {
+    font-size: 0.72rem;
+    padding: 3px 8px;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    color: var(--text-muted);
+  }
+
+  /* ── CONTACT ── */
+  #contact { text-align: center; }
+  .contact-inner { max-width: 560px; margin: 0 auto; }
+  .contact-inner p { color: var(--text-secondary); margin-bottom: 2.5rem; font-size: 0.97rem; }
+  .contact-links { display: flex; justify-content: center; gap: 1.25rem; flex-wrap: wrap; margin-bottom: 3rem; }
+  .contact-link {
+    display: flex; align-items: center; gap: 8px;
+    padding: 0.7rem 1.5rem;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 0.83rem;
+    transition: background 0.2s, border-color 0.2s, color 0.2s;
+  }
+  .contact-link:hover { background: var(--accent-dim); border-color: var(--accent-line); color: var(--accent); }
+
+  /* ── FOOTER ── */
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 2rem 4rem;
+    text-align: center;
+    font-size: 0.78rem;
+    color: var(--text-muted);
+  }
+
+  /* ── BG DECORATION ── */
+  .bg-glow {
+    position: fixed;
+    width: 600px; height: 600px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(78,154,241,0.05) 0%, transparent 70%);
+    pointer-events: none;
+    top: -150px; right: -150px;
+    z-index: 0;
+  }
+
+  /* ── FADE IN ── */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+  @media (max-width: 768px) {
+    nav { padding: 1rem 1.5rem; }
+    .nav-links { gap: 1.25rem; }
+    #hero { padding: 7rem 1.5rem 4rem; }
+    .hero-grid { grid-template-columns: 1fr; gap: 3rem; }
+    section { padding: 4rem 1.5rem; }
+    .about-grid { grid-template-columns: 1fr; gap: 2rem; }
+    footer { padding: 1.5rem; }
+  }
+</style>
+</head>
+<body>
+
+<div class="bg-glow"></div>
+
+<!-- NAV -->
+<nav>
+  <a href="#hero" class="nav-logo">RJF Felipe</a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<div id="hero" style="padding-top:0; max-width:none;">
+  <div class="hero-grid">
+    <div class="fade-in">
+      <div class="hero-eyebrow">Electrical & Electronics Engineer</div>
+      <h1 class="hero-name">Ric Jose<br><em>Francis Felipe</em></h1>
+      <p class="hero-tagline">
+        EEE graduate with hands-on test engineering experience at Plexus Manufacturing. Specialising in ICT, NPI validation, and PCB failure analysis — open to opportunities in Singapore.
+      </p>
+      <div class="hero-cta">
+        <a href="#projects" class="btn-primary">View Projects</a>
+        <a href="#contact" class="btn-outline">Get in Touch</a>
+      </div>
+    </div>
+    <div class="hero-stats fade-in" style="transition-delay:0.15s">
+      <div class="stat-card">
+        <div class="stat-num">2×</div>
+        <div class="stat-label">Internships at Plexus Manufacturing</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">3.33</div>
+        <div class="stat-label">CGPA — Upper Second Class Honours</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">3+</div>
+        <div class="stat-label">Hardware & software projects</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">ADI</div>
+        <div class="stat-label">Industry collaboration with Analog Devices Inc.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="section-eyebrow">About</div>
+  <h2 class="section-title">Background & Profile</h2>
+  <div class="about-grid fade-in">
+    <div class="about-text">
+      <p>
+        I'm a fresh <strong>Electrical & Electronics Engineering graduate</strong> (Upper Second Class Honours, Coventry University via INTI International College Penang) with a strong foundation in test engineering, PCB troubleshooting, and electronics manufacturing.
+      </p>
+      <p>
+        Over two internships at <strong>Plexus Manufacturing Sdn. Bhd.</strong> — a global tier-1 EMS company — I worked across both the Hillside (medical) and Seaside facilities, gaining experience with ICT systems, NPI functional validation, and production-floor troubleshooting in high-mix environments.
+      </p>
+      <p>
+        My final-year project was developed in collaboration with <strong>Analog Devices Inc.</strong>, combining R-CNN object detection with RFID integration for warehouse inventory tracking — a project that bridges my hardware background with applied AI and Industrial IoT.
+      </p>
+      <p>
+        I'm actively seeking <strong>test engineering, hardware, or electronics manufacturing roles in Singapore</strong> and am available to relocate immediately.
+      </p>
+    </div>
+    <div class="about-info">
+      <div class="info-item">
+        <span class="info-label">Location</span>
+        <span class="info-value">George Town, Penang — open to relocate to Singapore</span>
+      </div>
+      <div class="info-item">
+        <span class="info-label">Education</span>
+        <span class="info-value">BEng (Hons) EEE — Coventry University (3+0)</span>
+      </div>
+      <div class="info-item">
+        <span class="info-label">Languages</span>
+        <span class="info-value">English · Malay · Filipino (native)</span>
+      </div>
+      <div class="info-item">
+        <span class="info-label">Email</span>
+        <span class="info-value">ricfelipe22@gmail.com</span>
+      </div>
+      <div class="info-item">
+        <span class="info-label">LinkedIn</span>
+        <span class="info-value">linkedin.com/in/ricjose-francis-felipe-954b5024b</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" style="padding-top:0;">
+  <div class="section-eyebrow">Skills</div>
+  <h2 class="section-title">Technical Expertise</h2>
+  <div class="skills-grid fade-in">
+    <div class="skill-group">
+      <div class="skill-group-title">Testing & Manufacturing</div>
+      <div class="skill-tags">
+        <span class="skill-tag">ICT — Keysight i3070</span>
+        <span class="skill-tag">MDA — TRI5001E</span>
+        <span class="skill-tag">GOPEL Juliet</span>
+        <span class="skill-tag">AOI</span>
+        <span class="skill-tag">Functional Testing</span>
+        <span class="skill-tag">NPI Support</span>
+      </div>
+    </div>
+    <div class="skill-group">
+      <div class="skill-group-title">Hardware & Design</div>
+      <div class="skill-tags">
+        <span class="skill-tag">PCB Design (KiCAD)</span>
+        <span class="skill-tag">EasyEDA</span>
+        <span class="skill-tag">AutoCAD</span>
+        <span class="skill-tag">Soldering</span>
+        <span class="skill-tag">Circuit Debugging</span>
+        <span class="skill-tag">LTSPICE</span>
+      </div>
+    </div>
+    <div class="skill-group">
+      <div class="skill-group-title">Programming</div>
+      <div class="skill-tags">
+        <span class="skill-tag">C++ (OOP)</span>
+        <span class="skill-tag">Arduino (Embedded C)</span>
+        <span class="skill-tag">MATLAB</span>
+        <span class="skill-tag">Python (basic)</span>
+      </div>
+    </div>
+    <div class="skill-group">
+      <div class="skill-group-title">Concepts & Methods</div>
+      <div class="skill-tags">
+        <span class="skill-tag">Root Cause Analysis</span>
+        <span class="skill-tag">Failure Analysis</span>
+        <span class="skill-tag">System Validation</span>
+        <span class="skill-tag">IoT Integration</span>
+        <span class="skill-tag">R-CNN / ML (basic)</span>
+        <span class="skill-tag">RFID</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience" style="padding-top:0;">
+  <div class="section-eyebrow">Experience</div>
+  <h2 class="section-title">Work History</h2>
+  <div class="timeline fade-in">
+
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="exp-card">
+        <div class="exp-header">
+          <div class="exp-role">Test Engineering Intern</div>
+          <div class="exp-period">Dec 2024 – Apr 2025</div>
+        </div>
+        <div class="exp-company">Plexus Manufacturing Sdn. Bhd. — Hillside (Medical Division), Penang</div>
+        <ul class="exp-bullets">
+          <li>Validated functional testing using 8 gold units during NPI phase, ensuring accuracy, repeatability, and compliance with medical manufacturing standards</li>
+          <li>Performed functional testing for NPI units, identifying early-stage defects and reducing downstream production risks</li>
+          <li>Configured and optimised ICT and functional test systems for stable, efficient production testing</li>
+          <li>Collaborated with engineers to troubleshoot test failures and enhance system reliability</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="exp-card">
+        <div class="exp-header">
+          <div class="exp-role">Test Engineering Intern</div>
+          <div class="exp-period">Dec 2022 – Apr 2023</div>
+        </div>
+        <div class="exp-company">Plexus Manufacturing Sdn. Bhd. — Seaside, Penang</div>
+        <ul class="exp-bullets">
+          <li>Diagnosed and resolved 7+ PCB failures per day, improving troubleshooting turnaround time and maintaining production flow</li>
+          <li>Set up and calibrated ICT systems, enhancing test reliability and accuracy in PCB validation</li>
+          <li>Reduced test downtime by identifying and resolving tester-related issues across continuous manufacturing operations</li>
+          <li>Conducted visual inspections and debugging of PCBAs to identify soldering and component defects</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" style="padding-top:0;">
+  <div class="section-eyebrow">Projects</div>
+  <h2 class="section-title">Selected Work</h2>
+  <div class="projects-grid fade-in">
+
+    <div class="project-card">
+      <div class="project-label">AI / Industrial IoT · Apr–Dec 2025</div>
+      <div class="project-title">AI-Based Storage Tracking System with R-CNN & RFID</div>
+      <p class="project-desc">
+        Developed an R-CNN object detection system for warehouse inventory tracking in collaboration with Analog Devices Inc. Integrated RFID for real-time visibility and aligned system design with scalable deployment standards through direct industry mentorship.
+      </p>
+      <div class="project-tech">
+        <span class="tech-pill">R-CNN</span>
+        <span class="tech-pill">RFID</span>
+        <span class="tech-pill">Industrial IoT</span>
+        <span class="tech-pill">Python</span>
+        <span class="tech-pill">Analog Devices</span>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-label">Power Electronics · Aug–Dec 2023</div>
+      <div class="project-title">Motor Directional Control via Plug-and-Play Relay</div>
+      <p class="project-desc">
+        Designed a bidirectional motor control circuit supporting forward, reverse, and braking functions with a modular plug-and-play interface for rapid maintenance. Applied opto-isolation to protect control circuits from high-voltage noise.
+      </p>
+      <div class="project-tech">
+        <span class="tech-pill">Relay Control</span>
+        <span class="tech-pill">Opto-isolation</span>
+        <span class="tech-pill">Circuit Design</span>
+        <span class="tech-pill">PCB</span>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-label">Embedded IoT · Aug–Dec 2023</div>
+      <div class="project-title">Low-Cost IoT Home Temperature Monitor</div>
+      <p class="project-desc">
+        Built a real-time temperature and humidity monitoring system using ESP32 and DHT22 sensors. Developed embedded firmware in C++ for data acquisition and automated control, with remote monitoring via the Blynk platform.
+      </p>
+      <div class="project-tech">
+        <span class="tech-pill">ESP32</span>
+        <span class="tech-pill">DHT22</span>
+        <span class="tech-pill">C++</span>
+        <span class="tech-pill">Blynk</span>
+        <span class="tech-pill">Embedded Firmware</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" style="padding-top:0;">
+  <div class="section-eyebrow" style="justify-content:center;">Contact</div>
+  <h2 class="section-title" style="text-align:center; margin-bottom:1rem;">Let's connect</h2>
+  <div class="contact-inner fade-in">
+    <p>I'm actively looking for test engineering, hardware, or electronics manufacturing roles in Singapore. Feel free to reach out — I'd love to chat.</p>
+    <div class="contact-links">
+      <a href="mailto:ricfelipe22@gmail.com" class="contact-link">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+        ricfelipe22@gmail.com
+      </a>
+      <a href="https://www.linkedin.com/in/ricjose-francis-felipe-954b5024b" target="_blank" class="contact-link">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        LinkedIn Profile
+      </a>
+      <a href="tel:+60174278369" class="contact-link">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.61 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.18 6.18l.96-.87a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        +60 17-427 8369
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2025 Ric Jose Francis Felipe · Built for job applications in Singapore</p>
+</footer>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
