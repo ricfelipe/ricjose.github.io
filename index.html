@@ -259,6 +259,8 @@
           <a href="Resume.pdf" target="_blank" class="btn-primary"> View My Resume ↗</a>
       </div>
     </div>
+   </div> 
+</div>
 
 <!-- ABOUT -->
 <section id="about">
@@ -451,19 +453,16 @@
       ],
       tech: ["R-CNN", "RFID", "Python", "Industrial IoT", "Object Detection", "Analog Devices Inc."],
       media: [
-        { type: "real", label: "Model Training", html: '<img sec="assets/images/fyp_model.png" style="width:100%; border-radius:4px;">' }
-        { type: "real", label: "Results", html:
-           <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px;">
-                <img src="assets/fyp_results1.png" style="width:100%; border-radius:4px; object-fit:cover;">
-                 <img src="assets/fyp_results2.png" style="width:100%; border-radius:4px; object-fit:cover;">
-          </div>' },
+        { type: "real", label: "Model Training", html: '<img src="assets/images/fyp_model.png" style="width:100%; border-radius:4px;">' },
+        { type: "real", label: "Results", html: '
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px; width:100%;">
+                 <img src="assets/fyp_results1.png" style="width:100%; border-radius:4px; max-height:150px; object-fit:cover;">
+                 <img src="assets/fyp_results2.png" style="width:100%; border-radius:4px; max-height:150px; object-fit:cover;">
+           </div>' },
         { type: "video", label: "Project Demo Video", hint: 'Replace with Google Drive iframe or <video> tag' },
-        { type: "real", label: "Hardware Setup", html: '<img sec="assets/images/fyp_setup.png" style="width:100%; border-radius:4px;">' }
+        { type: "real", label: "Hardware Setup", hint: '<img src="assets/images/fyp_setup.png" style="width:100%; border-radius:4px;">' }
       ],
-      /*links: [
-        //{ label: "GitHub Repository", url: "https://github.com/your-username/your-repo", primary: true },
-       // { label: "Project Report (PDF)", url: "#", primary: false }
-      */]
+      links: [}
     },
     proj2: {
       label: "Power Electronics · Aug–Dec 2023",
