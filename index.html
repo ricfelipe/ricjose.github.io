@@ -451,15 +451,19 @@
       ],
       tech: ["R-CNN", "RFID", "Python", "Industrial IoT", "Object Detection", "Analog Devices Inc."],
       media: [
-        { type: "image", label: "System Architecture Diagram", hint: 'Replace with: <img src="assets/proj1-arch.jpg">' },
-        { type: "image", label: "Demo Screenshot", hint: 'Replace with: <img src="assets/proj1-demo.jpg">' },
+        { type: "real", label: "Model Training", html: '<img sec="assets/images/fyp_model.png" style="width:100%; border-radius:4px;">' }
+        { type: "real", label: "Results", html:
+           <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px;">
+                <img src="assets/fyp_results1.png" style="width:100%; border-radius:4px; object-fit:cover;">
+                 <img src="assets/fyp_results2.png" style="width:100%; border-radius:4px; object-fit:cover;">
+          </div>' },
         { type: "video", label: "Project Demo Video", hint: 'Replace with Google Drive iframe or <video> tag' },
-        { type: "image", label: "Hardware Setup", hint: 'Replace with: <img src="assets/proj1-hw.jpg">' }
+        { type: "real", label: "Hardware Setup", html: '<img sec="assets/images/fyp_setup.png" style="width:100%; border-radius:4px;">' }
       ],
-      links: [
-        { label: "GitHub Repository", url: "https://github.com/your-username/your-repo", primary: true },
-        { label: "Project Report (PDF)", url: "#", primary: false }
-      ]
+      /*links: [
+        //{ label: "GitHub Repository", url: "https://github.com/your-username/your-repo", primary: true },
+       // { label: "Project Report (PDF)", url: "#", primary: false }
+      */]
     },
     proj2: {
       label: "Power Electronics · Aug–Dec 2023",
