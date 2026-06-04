@@ -440,8 +440,8 @@
         { type: "real", label: "Model Training", html: `<img src="assets/images/fyp_model.png" style="width:100%; height:auto; min-height:160px; max-height:220px; object-fit:cover; display:block;">` },
         { type: "real", label: "Results", html: `
             <div style="display:grid; grid-template-columns:1fr 1fr; gap:6px; width:100%;">
-                 <img src="assets/fyp_results1.png" style="width:100%; height:auto; min-height:160px; max-height:220px; object-fit:cover; border-radius:2px;">
-                 <img src="assets/fyp_results2.png" style="width:100%; height:auto; min-height:160px; max-height:220px; object-fit:cover; border-radius:2px;">
+                 <img src="assets/images/fyp_results1.png" style="width:100%; height:auto; min-height:160px; max-height:220px; object-fit:cover; border-radius:2px;">
+                 <img src="assets/images/fyp_results2.png" style="width:100%; height:auto; min-height:160px; max-height:220px; object-fit:cover; border-radius:2px;">
             </div>` },
         { type: "video", label: "Project Demo Video", hint: "Replace with Google Drive iframe or &lt;video&gt; tag" },
         { type: "real", label: "Hardware Setup", html: `<img src="assets/images/fyp_setup.png" style="width:100%; height:auto; min-height:160px; max-height:220px; object-fit:cover; display:block;">` }
@@ -462,15 +462,12 @@
       ],
       tech: ["Relay Control", "Opto-isolation", "PCB Design", "Circuit Debugging", "KiCAD", "LTSPICE"],
       media: [
-        { type: "image", label: "Circuit Schematic", hint: 'Replace with: <img src="assets/proj2-schematic.jpg">' },
-        { type: "image", label: "PCB Layout", hint: 'Replace with: <img src="assets/proj2-pcb.jpg">' },
+        { type: "real", label: "Circuit Schematic", html:  '<img src="assets/images/relay_circuit.png" style="width:100%; height:auto; min-height:160px; max-height:220px; object-fit:cover; display:block;">'},
+        { type: "real", label: "PCB Layout", html: '<img src="assets/images/relay_layout.png" style="width:100%; height:auto; min-height:160px; max-height:220px; object-fit:cover; display:block;">' },
         { type: "video", label: "Live Demo Video", hint: 'Replace with Google Drive iframe or <video> tag' },
-        { type: "image", label: "Assembled Board", hint: 'Replace with: <img src="assets/proj2-assembled.jpg">' }
+        { type: "real", label: "Assembled Board", hint: '<img src="assets/images/relay_pcb.png" style="width:100%; height:auto; min-height:160px; max-height:220px; object-fit:cover; display:block;">' }
       ],
-      links: [
-        { label: "GitHub Repository", url: "https://github.com/your-username/your-repo", primary: true },
-        { label: "Project Report (PDF)", url: "#", primary: false }
-      ]
+      links: []
     },
     proj3: {
       label: "Embedded IoT · Aug–Dec 2023",
@@ -484,15 +481,12 @@
       ],
       tech: ["ESP32", "DHT22", "C++", "Blynk", "Embedded Firmware", "Arduino IDE", "IoT"],
       media: [
-        { type: "image", label: "System Setup Photo", hint: 'Replace with: <img src="assets/proj3-setup.jpg">' },
-        { type: "image", label: "Blynk Dashboard Screenshot", hint: 'Replace with: <img src="assets/proj3-dashboard.jpg">' },
+        { type: "real", label: "System Setup Photo", html: '<img src="assets/images/temp_setup.png" style="width:100%; height:auto; min-height:160px; max-height:220px; object-fit:cover; display:block;">' },
+        { type: "real", label: "Blynk Dashboard Screenshot", html: '<img src="assets/images/temp_blynk.png" style="width:100%; height:auto; min-height:160px; max-height:220px; object-fit:cover; display:block;">' },
         { type: "video", label: "Live Demo Video", hint: 'Replace with Google Drive iframe or <video> tag' },
-        { type: "image", label: "Circuit Diagram", hint: 'Replace with: <img src="assets/proj3-circuit.jpg">' }
+        { type: "real", label: "Circuit Diagram", html: '<img src="assets/images/temp_circuit diagram.png" style="width:100%; height:auto; min-height:160px; max-height:220px; object-fit:cover; display:block;">' }
       ],
-      links: [
-        { label: "GitHub Repository", url: "https://github.com/your-username/your-repo", primary: true },
-        { label: "Project Report (PDF)", url: "#", primary: false }
-      ]
+      links: []
     }
   };
 
