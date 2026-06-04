@@ -527,6 +527,11 @@
     // media placeholders
     const media = document.getElementById('modalMedia');
     media.innerHTML = p.media.map(m => `
+    // If a real HTML element string exists, render it directly without the gray placeholder container
+      if (m.html) {
+        return `<div>${m.html}</div>`;
+      }
+ return `
       <div class="media-slot">
         <div class="media-slot-icon">${m.type === 'video' ? '▶' : '🖼'}</div>
         <div class="media-slot-label">${m.label}</div>
