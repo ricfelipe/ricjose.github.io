@@ -64,7 +64,6 @@
   .btn-primary:hover { opacity: 0.88; transform: translateY(-1px); }
   .btn-outline { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 0.75rem 1.75rem; min-width: 160px; border: 1px solid var(--accent-line); color: var(--accent); text-decoration: none; font-size: 0.83rem; font-weight: 500; letter-spacing: 0.04em; border-radius: 2px; transition: background 0.2s, transform 0.2s; }
   .btn-outline:hover { background: var(--accent-dim); transform: translateY(-1px); }
-  
 
   /* SECTIONS */
   section { padding: 6rem 4rem; max-width: 1100px; margin: 0 auto; }
@@ -234,7 +233,6 @@
 
 <div class="bg-glow"></div>
 
-<!-- NAV -->
 <nav>
   <a href="#hero" class="nav-logo">Ric Felipe</a>
   <ul class="nav-links">
@@ -246,7 +244,6 @@
   </ul>
 </nav>
 
-<!-- HERO -->
 <div id="hero" style="max-width:none;">
   <div class="hero-grid">
     <div class="fade-in">
@@ -262,7 +259,6 @@
    </div> 
 </div>
 
-<!-- ABOUT -->
 <section id="about">
   <div class="section-eyebrow">About</div>
   <h2 class="section-title">Background & Profile</h2>
@@ -283,7 +279,6 @@
   </div>
 </section>
 
-<!-- SKILLS -->
 <section id="skills" style="padding-top:0;">
   <div class="section-eyebrow">Skills</div>
   <h2 class="section-title">Technical Expertise</h2>
@@ -295,7 +290,6 @@
   </div>
 </section>
 
-<!-- EXPERIENCE -->
 <section id="experience" style="padding-top:0;">
   <div class="section-eyebrow">Experience</div>
   <h2 class="section-title">Work History</h2>
@@ -329,7 +323,6 @@
   </div>
 </section>
 
-<!-- PROJECTS -->
 <section id="projects" style="padding-top:0;">
   <div class="section-eyebrow">Projects</div>
   <h2 class="section-title">Selected Work</h2>
@@ -371,7 +364,6 @@
   </div>
 </section>
 
-<!-- CONTACT -->
 <section id="contact" style="padding-top:0;">
   <div class="section-eyebrow" style="justify-content:center;">Contact</div>
   <h2 class="section-title" style="text-align:center; margin-bottom:1rem;">Let's connect</h2>
@@ -398,7 +390,6 @@
   <p>© 2026 Ric Jose Francis Felipe</p>
 </footer>
 
-<!-- MODAL OVERLAY -->
 <div class="modal-overlay" id="modalOverlay" onclick="handleOverlayClick(event)">
   <div class="modal" id="modalBox">
 
@@ -412,23 +403,18 @@
 
     <div class="modal-body">
 
-      <!-- Media Grid Container -->
       <div class="modal-section-title">Images & Videos</div>
       <div class="media-grid" id="modalMedia"></div>
 
-      <!-- Description -->
       <div class="modal-section-title">Overview</div>
       <p class="modal-description" id="modalDesc"></p>
 
-      <!-- Key highlights -->
       <div class="modal-section-title">Key Highlights</div>
       <ul class="modal-bullets" id="modalBullets"></ul>
 
-      <!-- Tech stack -->
       <div class="modal-section-title">Technologies Used</div>
       <div class="modal-tech" id="modalTech"></div>
 
-      <!-- Links -->
       <div class="modal-section-title">Links</div>
       <div class="modal-links" id="modalLinks"></div>
 
@@ -451,17 +437,17 @@
       ],
       tech: ["R-CNN", "RFID", "Python", "Industrial IoT", "Object Detection", "Analog Devices Inc."],
       media: [
-        { type: "real", label: "Model Training", html: `<img src="assets/images/fyp_model.png" style="width:100%; height:100%; object-fit:cover; display:block;">` },
+        { type: "real", label: "Model Training", html: `<img src="assets/images/fyp_model.png" style="width:100%; height:auto; min-height:160px; max-height:220px; object-fit:cover; display:block;">` },
         { type: "real", label: "Results", html: `
-            <div style="display:grid; grid-template-columns:1fr 1fr; gap:6px; width:100%; height:100%;">
-                 <img src="assets/images/fyp_results1.png" style="width:100%; height:100%; object-fit:cover; border-radius:2px;">
-                 <img src="assets/images/fyp_results2.png" style="width:100%; height:100%; object-fit:cover; border-radius:2px;">
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:6px; width:100%;">
+                 <img src="assets/fyp_results1.png" style="width:100%; height:auto; min-height:160px; max-height:220px; object-fit:cover; border-radius:2px;">
+                 <img src="assets/fyp_results2.png" style="width:100%; height:auto; min-height:160px; max-height:220px; object-fit:cover; border-radius:2px;">
             </div>` },
         { type: "video", label: "Project Demo Video", hint: "Replace with Google Drive iframe or &lt;video&gt; tag" },
-        { type: "real", label: "Hardware Setup", html: `<img src="assets/images/fyp_setup.png" style="width:100%; height:100%; object-fit:cover; display:block;">` }
+        { type: "real", label: "Hardware Setup", html: `<img src="assets/images/fyp_setup.png" style="width:100%; height:auto; min-height:160px; max-height:220px; object-fit:cover; display:block;">` }
       ],
       links: [
-       { label: "View Poster", url: "assets/docs/fyp_poster.pdf", primary: true }
+        { label: "View System Architecture File (A1)", url: "assets/documents/ai_system_architecture.pdf", primary: true }
       ]
     },
     proj2: {
@@ -476,12 +462,15 @@
       ],
       tech: ["Relay Control", "Opto-isolation", "PCB Design", "Circuit Debugging", "KiCAD", "LTSPICE"],
       media: [
-        { type: "real", label: "Circuit Schematic", hint: '<img src="assets/images/relay_circuit.png" style="width:100%; height:100%; object-fit:cover; display:block;">' },
-        { type: "real", label: "PCB Layout", html: '>img src="assets/images/relay_layout.png" style="width:100%; height:100%; object-fit:cover; display:block;">' },
+        { type: "image", label: "Circuit Schematic", hint: 'Replace with: <img src="assets/proj2-schematic.jpg">' },
+        { type: "image", label: "PCB Layout", hint: 'Replace with: <img src="assets/proj2-pcb.jpg">' },
         { type: "video", label: "Live Demo Video", hint: 'Replace with Google Drive iframe or <video> tag' },
-        { type: "real", label: "Assembled Board", html: '<img src="assets/images/relay_pcb.png" style="width:100%; height:100%; object-fit:cover; display:block;">' }
+        { type: "image", label: "Assembled Board", hint: 'Replace with: <img src="assets/proj2-assembled.jpg">' }
       ],
-      links: []
+      links: [
+        { label: "GitHub Repository", url: "https://github.com/your-username/your-repo", primary: true },
+        { label: "Project Report (PDF)", url: "#", primary: false }
+      ]
     },
     proj3: {
       label: "Embedded IoT · Aug–Dec 2023",
@@ -495,12 +484,15 @@
       ],
       tech: ["ESP32", "DHT22", "C++", "Blynk", "Embedded Firmware", "Arduino IDE", "IoT"],
       media: [
-        { type: "real", label: "System Setup Photo", html: '<img src="assets/images/temp_setup.png" style="width:100%; height:100%; object-fit:cover; display:block;">' },
-        { type: "real", label: "Blynk Dashboard Screenshot", html: '<img src="assets/images/temp_blynk.png" style="width:100%; height:100%; object-fit:cover; display:block;">' },
+        { type: "image", label: "System Setup Photo", hint: 'Replace with: <img src="assets/proj3-setup.jpg">' },
+        { type: "image", label: "Blynk Dashboard Screenshot", hint: 'Replace with: <img src="assets/proj3-dashboard.jpg">' },
         { type: "video", label: "Live Demo Video", hint: 'Replace with Google Drive iframe or <video> tag' },
-        { type: "real", label: "Circuit Diagram", html: '<img src="assets/images/temp_circuit diagram.png" style="width:100%; height:100%; object-fit:cover; display:block;">' }
+        { type: "image", label: "Circuit Diagram", hint: 'Replace with: <img src="assets/proj3-circuit.jpg">' }
       ],
-      links: []
+      links: [
+        { label: "GitHub Repository", url: "https://github.com/your-username/your-repo", primary: true },
+        { label: "Project Report (PDF)", url: "#", primary: false }
+      ]
     }
   };
 
@@ -509,6 +501,11 @@
     document.getElementById('modalLabel').textContent = p.label;
     document.getElementById('modalTitle').textContent = p.title;
     document.getElementById('modalDesc').textContent = p.desc;
+
+    // Remove any previously left-over embedded iframe windows upon opening fresh projects
+    if (document.getElementById('inlinePdfViewer')) {
+      document.getElementById('inlinePdfViewer').remove();
+    }
 
     // bullets
     const bul = document.getElementById('modalBullets');
@@ -521,7 +518,6 @@
     // media grid rendering
     const media = document.getElementById('modalMedia');
     media.innerHTML = p.media.map(m => {
-      // Clean HTML logic execution wrapped beautifully into card placeholders
       if (m.html) {
         return `
           <div class="media-slot" style="padding: 0; overflow: hidden; border-style: solid;">
@@ -538,18 +534,38 @@
       `;
     }).join('');
 
-    // links structural handling
+    // links handling setup
     const links = document.getElementById('modalLinks');
     if (p.links && p.links.length > 0) {
-      links.innerHTML = p.links.map(l =>
-        `<a href="${l.url}" target="_blank" class="modal-link ${l.primary ? '' : 'modal-link-ghost'}">${l.label} ↗</a>`
-      ).join('');
+      links.innerHTML = p.links.map(l => {
+        if (l.url.endsWith('.pdf')) {
+          return `<button onclick="embedPdfViewer('${l.url}')" class="modal-link ${l.primary ? '' : 'modal-link-ghost'}" style="cursor:pointer; text-align:left; font-family:inherit;">${l.label} ↓</button>`;
+        }
+        return `<a href="${l.url}" target="_blank" class="modal-link ${l.primary ? '' : 'modal-link-ghost'}">${l.label} ↗</a>`;
+      }).join('');
     } else {
       links.innerHTML = '<p style="color:var(--text-muted); font-size:0.85rem;">No active project attachments linked.</p>';
     }
 
     document.getElementById('modalOverlay').classList.add('open');
     document.body.style.overflow = 'hidden';
+  }
+
+  function embedPdfViewer(url) {
+    const linksContainer = document.getElementById('modalLinks');
+    
+    // Toggle system logic: if click matches an open element, clean it off the grid viewport
+    if (document.getElementById('inlinePdfViewer')) {
+      document.getElementById('inlinePdfViewer').remove();
+      return;
+    }
+    
+    const iframeHtml = `
+      <div id="inlinePdfViewer" style="width:100%; margin-top:1.5rem; border:1px solid var(--accent-line); border-radius:4px; overflow:hidden;">
+        <iframe src="${url}" style="width:100%; height:500px; border:none;"></iframe>
+      </div>
+    `;
+    linksContainer.insertAdjacentHTML('afterend', iframeHtml);
   }
 
   function closeModal() {
