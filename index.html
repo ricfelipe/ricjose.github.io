@@ -51,8 +51,8 @@
   .nav-links a:hover { color: var(--accent); }
 
   /* HERO */
-  #hero { min-height: 100vh; display: flex; align-items: center; padding: 8rem 4rem 5rem; position: relative; overflow: hidden; }
-  .hero-grid { display: grid; grid-template-columns: 1fr; gap: 4rem; align-items: center; max-width: 1100px; margin: 0 auto; width: 100%; }
+  #hero { min-height: 60vh; display: flex; align-items: center; padding: 5rem 4rem 3rem; position: relative; overflow: hidden; }
+  .hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; max-width: 1100px; margin: 0 auto; width: 100%; }
   .hero-eyebrow { font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); margin-bottom: 1.25rem; display: flex; align-items: center; gap: 10px; }
   .hero-eyebrow::before { content: ''; display: inline-block; width: 28px; height: 1px; background: var(--accent); }
   .hero-name { font-family: var(--serif); font-size: clamp(2.6rem, 5vw, 4rem); line-height: 1.1; color: var(--text-primary); margin-bottom: 1.25rem; }
@@ -220,7 +220,8 @@
     nav { padding: 1rem 1.5rem; }
     .nav-links { gap: 1.25rem; }
     #hero { padding: 7rem 1.5rem 4rem; }
-    .hero-grid { grid-template-columns: 1fr; gap: 3rem; }
+    .hero-grid { grid-template-columns: 1fr; }
+   .hero-grid img { width: 200px; height: 200px; }
     section { padding: 4rem 1.5rem; }
     .about-grid { grid-template-columns: 1fr; gap: 2rem; }
     .media-grid { grid-template-columns: 1fr; }
@@ -250,15 +251,20 @@
     <div class="fade-in">
       <div class="hero-eyebrow">Electrical & Electronics Engineer</div>
       <h1 class="hero-name">Ric Jose<br><em>Francis Felipe</em></h1>
-      <p class="hero-tagline">EEE graduate with hands-on test engineering experience at Plexus Manufacturing. Specialising in ICT, NPI validation, and PCB failure analysis — open to opportunities in Singapore.</p>
+      <p class="hero-tagline"> Electronics & Electrical Engineer (EEE) graduate with hands-on test engineering experience at Plexus Manufacturing. Specialising in ICT, NPI validation, and PCB failure analysis — open to opportunities in Singapore.</p>
       <div class="hero-cta">
         <a href="#projects" class="btn-primary">View Projects</a>
         <a href="#contact" class="btn-outline">Get in Touch</a>
         <a href="Resume.pdf" target="_blank" class="btn-primary"> View My Resume ↗</a>
       </div>
     </div>
-   </div> 
-</div>
+       <div class="fade-in" style="display:flex; justify-content:center; align-items:center;"> <!-- Image here  -->
+      <img src="assets/images/me.jpg" alt="Ric Felipe"
+        style="width:320px; height:320px; object-fit:cover; border-radius:12px; 
+               border: 2px solid rgba(78,154,241,0.4);
+               box-shadow: 0 0 40px rgba(78,154,241,0.15);">
+       </div>
+  </div>
 
 <section id="about">
   <div class="section-eyebrow">About</div>
@@ -542,7 +548,7 @@
       media: [
         { type: "real", label: "Circuit Schematic", html:'<img src="assets/images/relay_circuit.png" style="width:100%; height:auto; min-height:160px; display:block;">'},
         { type: "real", label: "PCB Layout", html: '<img src="assets/images/relay_layout.png" style="width:100%; height:auto; min-height:160px; display:block;">' },
-        { type: "real", label: "Live Demo Video", html: 	'<iframe src="https://www.youtube.com/embed/watch?v=_Hqb2wkKZhI&t=5s" style="width:100%; height:260px; border:none; display:block;" allowfullscreen></iframe>' },
+        { type: "real", label: "Live Demo Video", html: 	'<iframe src="https://www.youtube.com/embed/_Hqb2wkKZhI" style="width:100%; height:260px; border:none; display:block;" allowfullscreen></iframe>' },
         { type: "real", label: "Assembled Board", html: '<img src="assets/images/relay_pcb.png" style="width:100%; height:auto; min-height:160px;  display:block;">' }
       ],
       links: []
